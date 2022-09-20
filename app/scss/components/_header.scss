@@ -1,0 +1,170 @@
+.header {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 22px 0 18px;
+  }
+
+  &__lang {
+    width: 33px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+  }
+
+  &__list {
+    min-height: 72px;
+    display: flex;
+    background-color: $brown;
+    box-shadow: 0px 0px 20px rgba(43, 42, 40, 0.2);
+    border-radius: 8px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-right: 1px dashed #E5EBF2;
+        height: 52px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+    padding: 36px 60px;
+    transition: opacity 0.6s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 84px;
+    }
+  }
+
+  &__menu-link {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+}
+
+.logo {
+  display: flex;
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__text {
+    display: block;
+    max-width: 255px;
+    font-size: 13px;
+    line-height: 1.38;
+    letter-spacing: 0.08em;
+  }
+
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__messenger {
+    margin-right: 40px;
+  }
+
+  &__messenger-text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  &__messenger-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__messenger-item--telegram {
+    background-color: #419FD9;
+  }
+
+
+  &__messenger-item--whatsapp {
+    background-color: #0DC143;
+  }
+
+  &__messenger-item--viber {
+    background-color: #675DA9;
+  }
+
+  &__info {
+    text-align: right;
+    margin-right: 27px;
+  }
+
+  &__info-link {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 0.8;
+    margin-bottom: 7px;
+  }
+
+  &__info-text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+
+  &__call {
+    margin-right: 25px;
+  }
+
+  &__call-btn {
+    padding: 16px 26px;
+    margin-bottom: 7px;
+  }
+
+  &__call-text {
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+}

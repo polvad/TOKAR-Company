@@ -13,6 +13,7 @@ body {
   max-width: 1200px;
   width: 100%;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .main {
@@ -35,4 +36,14 @@ body {
   font-weight: 700;
   line-height: 1.33;
   color: inherit;
+}
+
+.button {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $white;
+  background: linear-gradient(180deg, #F39C32 0%, #CB8734 100%);
+  box-shadow: 0 4px 4px rgba(203, 135, 52, 0.2);
+  border-radius: 4px;
 }
