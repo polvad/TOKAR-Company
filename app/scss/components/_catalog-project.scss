@@ -1,0 +1,64 @@
+.catalog-project {
+  position: relative;
+  background-color: $white;
+  padding-top: 343px;
+  padding-bottom: 145px;
+  z-index: 1;
+  margin-top: -196px;
+
+  &__title {
+    margin-bottom: 21px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {}
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.card-project {
+  max-width: 370px;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 0 30px rgba(43, 42, 40, 0.08);
+  border-radius: 0 40px 0 0;
+
+  &__link {}
+
+  &__img {}
+
+  &__body {
+    padding: 36px 50px 50px;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.86;
+    margin-bottom: 14px;
+  }
+  &.orientation {
+    max-width: 770px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    .card-project__body {
+      padding: 50px 60px 63px 50px;
+    }
+  }
+}
