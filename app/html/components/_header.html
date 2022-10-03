@@ -29,7 +29,7 @@
             +3 80 (67) 175 56 30
           </a>
           <p class="contacts__info-text">
-            с 09:00 до 18:00 (пн-вс) 
+            с 09:00 до 18:00 (пн-вс)
           </p>
         </div>
 
@@ -71,5 +71,117 @@
         </li>
       </ul>
     </nav>
+  </div>
+
+  <div class="header__popup popup">
+    <div class="popup__top">
+      <h2 class="popup__title">Меню</h2>
+      <button class="popup__close btn-close" type="button"></button>
+    </div>
+    <nav class="popup__nav">
+      <ul class="tabs">
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button" data-tab-target="#home">Жилое</button>
+          <ul class="tab-menu" id="home" data-tab-content>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Дома из профилированого бруса</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Дома из оцилиндрованого бруса</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Каркасные дома</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Дома из блока</a>
+            </li>
+          </ul>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button" data-tab-target="#pricing">Коммерческое</button>
+          <ul class="tab-menu" id="pricing" data-tab-content>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Базы отдыха</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Гостинницы</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Рестораны</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Кафе</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Магазины</a>
+            </li>
+          </ul>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__btn" type="button" data-tab-target="#about">Садовое</button>
+          <ul class="tab-menu" id="about" data-tab-content>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Деревянные бани</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Беседки</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Альтанки</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Детские игровые площадки</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Гаражи</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Деревянные детские домики</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Мангальные зоны и барбекю</a>
+            </li>
+            <li class="tab-menu__item">
+              <a class="tab-menu__link" href="#">Кухни</a>
+            </li>
+          </ul>
+        </li>
+        <li class="tabs__item">
+          <a class="tabs__link tabs__btn" href="#">О компании</a>
+        </li>
+        <li class="tabs__item">
+          <a class="tabs__link tabs__btn" href="#">Наши работы</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="popup__contacts contacts">
+
+      <div class="popup__messenger contacts__messenger">
+        <p class="popup__messenger-text contacts__messenger-text">
+          Связаться напрямую:
+        </p>
+        <a class="contacts__messenger-item contacts__messenger-item--telegram"
+          style="background-image: url('images/icons/icon-telegram.svg');" href="#"></a>
+        <a class="contacts__messenger-item contacts__messenger-item--whatsapp"
+          style="background-image: url('images/icons/icon-whatsapp.svg');" href="#"></a>
+        <a class="contacts__messenger-item contacts__messenger-item--viber"
+          style="background-image: url('images/icons/icon-viber.svg');" href="#"></a>
+      </div>
+
+      <div class="popup__info contacts__info">
+        <a class="contacts__info-link" href="tel:+380671755630">
+          +3 80 (67) 175 56 30
+        </a>
+        <p class="contacts__info-text">
+          с 09:00 до 18:00 (пн-вс)
+        </p>
+      </div>
+
+      <div class="contacts__call">
+        <button class="button" type="button">
+          Заказать звонок
+        </button>
+      </div>
+    </div>
   </div>
 </header>

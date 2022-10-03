@@ -58,6 +58,12 @@
       opacity: 0.7;
     }
   }
+
+  &__popup {
+    &.popup-show {
+      display: block;
+    }
+  }
 }
 
 
@@ -104,10 +110,15 @@
       display: none;
     }
 
+    &__contacts {
+      margin: 0;
+    }
+
     &__contacts-info {
       display: none;
     }
-    &__contacts-call{
+
+    &__contacts-call {
       margin: 0;
     }
   }

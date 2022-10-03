@@ -70,9 +70,8 @@ body {
   box-shadow: 0 4px 4px rgba(203, 135, 52, 0.2);
   border-radius: 4px;
 }
-.button--size--xl {
 
-}
+.button--size--xl {}
 
 .link-decoration {
   display: flex;
@@ -167,6 +166,156 @@ body {
     }
   }
 }
+
+.popup {
+  position: fixed;
+  inset: 0;
+  min-height: 100vh;
+  background-color: $light;
+  z-index: 100;
+  overflow-y: auto;
+  padding-bottom: 40px;
+  display: none;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 15px;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: $primery;
+    }
+
+    &::before {
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__messenger {
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  &__messenger-text {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.tabs {
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-align: center;
+    border-top: 1px solid $crema;
+    border-bottom: 1px solid $crema;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      width: 10px;
+      height: 10px;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 0.6s;
+    }
+
+    &::after {
+      right: 10px;
+    }
+
+    &::before {
+      left: 10px;
+    }
+
+    &.active {
+
+      &::after,
+      &::before {
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+
+  }
+
+  &__link {
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.tab-menu {
+  display: none;
+
+  &.active[data-tab-content] {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    padding: 11px;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
 
 @media (max-width: 1200px) {
   .logo {
