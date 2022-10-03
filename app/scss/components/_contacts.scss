@@ -1,0 +1,106 @@
+.contacts {
+
+  &__messenger-text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  &__messenger-item {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: center;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      outline: 1px solid $orange;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__messenger-item--telegram {
+    background-color: #419FD9;
+  }
+
+  &__messenger-item--whatsapp {
+    background-color: #0DC143;
+  }
+
+  &__messenger-item--viber {
+    background-color: #675DA9;
+  }
+
+  &__info {
+    text-align: right;
+  }
+
+  &__info-link {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 0.8;
+    margin-bottom: 7px;
+    transition: color 0.6s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__info-text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+
+  &__call-btn {
+    margin-bottom: 7px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__call-text {
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  &__btn-icon {
+    display: none;
+    fill: transparent;
+    stroke: $orange;
+  }
+
+}
+
+@media(max-width: 1200px) {
+  .contacts {
+    &__call {
+      margin: 0;
+    }
+
+    &-btn {
+      margin: 0;
+    }
+
+  }
+}

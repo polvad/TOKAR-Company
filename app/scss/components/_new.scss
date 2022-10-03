@@ -1,0 +1,103 @@
+.new {
+  background-color: $white;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__navigation-show {
+    display: none;
+    justify-content: center;
+  }
+
+  &__slider-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__arrow-icon {
+    width: 17px;
+    height: 10px;
+    fill: $orange;
+  }
+
+  &__arrow-icon--next {
+    transform: rotate(180deg);
+  }
+
+  .slider-fraction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    color: $orange;
+    margin: 0 5px;
+  }
+
+  &__slide {
+    .new-card {
+      margin: 0 auto;
+    }
+  }
+}
+
+.new-card {
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+
+  &__link {
+    display: block;
+    margin-bottom: 27px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__title-link {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    color: $white;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    border-radius: 4px;
+    background-color: $orange;
+  }
+}
+
+@media (max-width: 650px) {
+  .new {
+    &__navigation-show {
+      display: flex;
+    }
+
+    &__navigation-hide {
+      display: none;
+    }
+  }
+}

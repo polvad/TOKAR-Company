@@ -4,21 +4,22 @@
   padding-top: 343px;
   padding-bottom: 145px;
   z-index: 1;
-  margin-top: -196px;
 
   &__title {
-    margin-bottom: 21px;
+    margin-bottom: 28px;
   }
 
   &__list {
+    max-width: 770px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 30px;
   }
 
-  &__item {}
   &__img {
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 0;
     transform: translateY(-50%);
     z-index: -1;
@@ -31,13 +32,24 @@
   background-color: $white;
   box-shadow: 0 0 30px rgba(43, 42, 40, 0.08);
   border-radius: 0 40px 0 0;
+  overflow: hidden;
 
-  &__link {}
+  &__link {
+    display: block;
+    padding: 5px;
+  }
 
-  &__img {}
+  &__img {
+    transition: transform 0.6s;
+    height: auto;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
   &__body {
-    padding: 36px 50px 50px;
+    padding: 30px 20px 50px 50px;
   }
 
   &__title {
@@ -52,13 +64,83 @@
     line-height: 1.86;
     margin-bottom: 14px;
   }
+
   &.orientation {
     max-width: 770px;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
+
+    .card-project__link {
+      flex-shrink: 0;
+    }
+
     .card-project__body {
-      padding: 50px 60px 63px 50px;
+      padding: 50px 41px 63px 50px;
+    }
+
+    .card-project__text {
+      margin-bottom: 26px;
+    }
+
+  }
+}
+
+@media (max-width: 992px) {
+  .catalog-project {
+    &__img {
+      display: none;
     }
   }
+}
+
+@media (max-width: 800px) {
+  .catalog-project {
+    padding-top: 255px;
+    padding-bottom: 60px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-project {
+    &.orientation {
+      display: block;
+      max-width: 370px;
+    }
+
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog-project {
+    &__list {
+      gap: 20px;
+    }
+  }
+
+  .card-project {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    &__body {
+      padding: 15px 20px 30px;
+    }
+
+    &.orientation {
+      .card-project__body {
+        padding: 15px 20px 30px;
+      }
+
+    }
+  }
+
 }

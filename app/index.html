@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Tokar Company - производственно - строительная компания</title>
 </head>
@@ -14,45 +15,45 @@
     <header class="header">
   <div class="container">
     <div class="header__top">
+      <button class="burger" type="button">
+        <span class="burger__line"></span>
+      </button>
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/icons/icon-logo.svg" alt="">
-        <span class="logo__text">
+        <img class="logo__img" src="./images/icons/icon-logo.svg" width="251" height="33" alt="Логотип TokarCompany">
+        <span class="logo__text logo__text--hidden">
           TokarCompany - производственно -строительная компания
         </span>
       </a>
-      <div class="contacts">
-        <div class="contacts__messenger">
+      <div class="header__contacts contacts">
+
+        <div class="header__messenger contacts__messenger">
           <p class="contacts__messenger-text">
             Связаться напрямую:
           </p>
-          <a class="contacts__messenger-item contacts__messenger-item--telegram" href="#">
-            <img class="contacts__messenger-icon" src="./images/icons/icon-telegram.svg" width="12" height="12"
-              alt="Іконка Telegram">
-          </a>
-          <a class="contacts__messenger-item contacts__messenger-item--whatsapp" href="#">
-            <img class="contacts__messenger-icon" src="images/icons/icon-whatsapp.svg" width="12" height="12"
-              alt="Іконка Whatsapp">
-          </a>
-          <a class="contacts__messenger-item contacts__messenger-item--viber" href="#">
-            <img class="contacts__messenger-icon" src="images/icons/icon-viber.svg" width="12" height="12"
-              alt="Іконка Viber">
-          </a>
+          <a class="contacts__messenger-item contacts__messenger-item--telegram"
+            style="background-image: url('images/icons/icon-telegram.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--whatsapp"
+            style="background-image: url('images/icons/icon-whatsapp.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--viber"
+            style="background-image: url('images/icons/icon-viber.svg');" href="#"></a>
         </div>
 
-        <div class="contacts__info">
+        <div class="header__contacts-info contacts__info">
           <a class="contacts__info-link" href="tel:+380671755630">
             +3 80 (67) 175 56 30
           </a>
           <p class="contacts__info-text">
-            с
-            <time class="contacts__info-time">09:00</time>
-            до
-            <time class="contacts__info-time">18:00</time>
-            (пн-вс)
+            с 09:00 до 18:00 (пн-вс) 
           </p>
         </div>
-        <div class="contacts__call">
-          <button class="contacts__call-btn button" type="button">Заказать звонок</button>
+
+        <div class="header__contacts-call contacts__call">
+          <button class="contacts__call-btn button" type="button">
+            <span>Заказать звонок</span>
+            <svg class="contacts__btn-icon" width="22" height="22">
+              <use xlink:href="images/sprite.svg#icon-call"></use>
+            </svg>
+          </button>
           <p class="contacts__call-text">Бесплатно по Украине</p>
         </div>
       </div>
@@ -61,15 +62,15 @@
       </div>
     </div>
     <nav class="header__bottom">
-      <ul class="header__list">
-        <li class="header__item">
-          <a class="header__link" href="#">Жилое</a>
+      <ul class="header__list menu">
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Жилое</a>
         </li>
-        <li class="header__item">
-          <a class="header__link" href="#">Коммерческое</a>
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Коммерческое</a>
         </li>
-        <li class="header__item">
-          <a class="header__link" href="#">Садовое</a>
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Садовое</a>
         </li>
       </ul>
       <ul class="header__menu">
@@ -90,18 +91,22 @@
     <main class="main">
         <section class="hero">
   <div class="container">
-    <div class="hero__inner">
+    <div class="hero__inner" style="background-image: url('images/hero-img.png');">
       <div class="hero__content">
+        <p class="hero__description">
+          TokarCompany - производственно -строительная компания
+        </p>
         <h1 class="hero__title">
-          Производим и устанавливаем строения разных видов <br> в Украине
+          Производим и устанавливаем строения разных видов в Украине
         </h1>
+        <img class="hero__content-img" src="images/hero-img.png" alt="hero-bg">
         <p class="hero__text">
           Индивидуально под ваш запрос построим дом, ресторан, баню, беседку, мангал или любую другую постройку
         </p>
         <div class="hero__label">
-          <button class="hero__btn button">
+          <a class="hero__btn button" href="#">
             Перейти в каталог домов
-          </button>
+          </a>
           <a class="hero__link link-decoration" href="#">
             <span class="link-decoration__circel">
               <svg class="link-decoration__icon" width="5" height="10">
@@ -112,8 +117,8 @@
           </a>
         </div>
       </div>
-      <img class="hero__img" src="images/hero-img.png" width="615" height="506" alt="Фотография бани">
     </div>
+    
     <div class="benefits">
       <h2 class="benefits__title title">
         Почему выбирают нас:
@@ -137,10 +142,15 @@
         </li>
       </ul>
     </div>
+
   </div>
 </section>
         <div class="catalog-project">
-  <!-- <img class="catalog-project__img" src="./images/catalog-project-bg.jpg" alt=""> -->
+  <picture>
+    <source srcset="images/webp/catalog-project-bg.webp">
+    <img loading="lazy" class="catalog-project__img" src="./images/catalog-project-bg.jpg" width="1246" height="800"
+      alt="bg">
+  </picture>
   <div class="container">
     <h2 class="catalog-project__title title">
       Каталог проектов
@@ -149,7 +159,11 @@
       <li class="catalog-project__item">
         <article class="card-project">
           <a class="card-project__link" href="#">
-            <img class="card-project__img" src="images/project-home.jpg" alt="Фото жилих проектов">
+            <picture>
+              <source srcset="images/webp/project-home.webp">
+              <img loading="lazy" class="card-project__img" src="images/project-home.jpg" width="360" height="230"
+                alt="Фото жилих проектов">
+            </picture>
           </a>
           <div class="card-project__body">
             <h3 class="card-project__title">
@@ -172,7 +186,11 @@
       <li class="catalog-project__item">
         <article class="card-project">
           <a class="card-project__link" href="#">
-            <img class="card-project__img" src="images/project-commerce.jpg" alt="Фото коммерческих проектов">
+            <picture>
+              <source srcset="images/webp/project-commerce.webp">
+              <img loading="lazy" class="card-project__img" src="images/project-commerce.jpg" width="360" height="230"
+                alt="Фото коммерческих проектов">
+            </picture>
           </a>
           <div class="card-project__body">
             <h3 class="card-project__title">
@@ -195,7 +213,11 @@
       <li class="catalog-project__item">
         <article class="card-project orientation">
           <a class="card-project__link" href="#">
-            <img class="card-project__img" width="420" height="310" src="./images/garden.jpg" alt="Фото садових проектов">
+            <picture>
+              <source srcset="images/webp/garden.webp">
+              <img loading="lazy" class="card-project__img" width="420" height="310" src="./images/garden.jpg"
+                alt="Фото садових проектов">
+            </picture>
           </a>
           <div class="card-project__body">
             <h3 class="card-project__title">
@@ -216,14 +238,622 @@
         </article>
       </li>
     </ul>
+
   </div>
+  
 </div>
-        
+        <section class="construction-info section">
+  <div class="container">
+    <h2 class="construction-info__title title">
+      Из чего состоят наши строения?
+    </h2>
+    <ul class="construction-info__list">
+      <li class="construction-info__item">
+        <picture>
+          <source srcset="images/webp/model.webp">
+          <img loading="lazy" class="construction-info__img-card construction-info__img-card--1"
+            src="./images/model.png" width="225" height="161" alt="Декоративнае фото: фото 3D-макета">
+        </picture>
+        <h3 class="construction-info__title-card">
+          Создание <br> 3D-макета
+        </h3>
+        <p class="construction-info__text">
+          Это визуализация строения через экран гаджета. Макет создается индивидуально для клиента. Главная задача
+          3D-визуализации: учесть все детали в разработке и показать конечный вид проекта в оригинальном цвете и
+          размере, используя актуальные материалы и наполнение внутри.
+        </p>
+      </li>
+      <li class="construction-info__item">
+        <picture>
+          <source srcset="images/webp/measurement.webp">
+          <img loading="lazy" class="construction-info__img-card construction-info__img-card--2"
+            src="./images/measurement.png" width="204" height="205"
+            alt="Декоративнае фото: фото блокнота з линейкой и ручкой">
+        </picture>
+        <h3 class="construction-info__title-card">
+          Взятие замеров и <br> создание фундамента.
+        </h3>
+        <p class="construction-info__text">
+          Мы выезжаем на объект, обсуждаем задачу, выявляем потребность клиента и берем замеры. Строим несущую
+          конструкцию, которая выдержит нагрузку от здания и погодных условий. Профессионалы используют лазерный уровень
+          и качественные материалы, чтобы фундамент получился максимально крепким и ровным.
+        </p>
+      </li>
+      <li class="construction-info__item">
+        <picture>
+          <source srcset="images/webp/constructor.webp">
+          <img loading="lazy" class="construction-info__img-card construction-info__img-card--3"
+            src="./images/constructor.png" width="268" height="130" alt="Декоративнае фото: фото каркаса">
+        </picture>
+        <h3 class="construction-info__title-card">
+          Производство <br> конструкции
+        </h3>
+        <p class="construction-info__text">
+          На одном из 4 заводов по всей территории Украины мы производим конструкцию по техническому заданию. Задание
+          создается и согласуется с вами через прописанный договор в начале работ.
+        </p>
+      </li>
+      <li class="construction-info__item">
+        <picture>
+          <source srcset="images/webp/montage.webp">
+          <img loading="lazy" class="construction-info__img-card construction-info__img-card--4"
+            src="./images/montage.png" width="206" height="169" alt="Декоративнае фото: фото инструментов">
+        </picture>
+        <h3 class="construction-info__title-card">
+          Монтажные <br> работы
+        </h3>
+        <p class="construction-info__text">
+          Выполним полный объем работ: от возведения фундамента до устройства кровли. В конечном итоге, можно будет
+          сразу использовать строение, а не докупать материал на собственные деньги. Проведем сантехнические работы до
+          полной сдачи проекта.
+        </p>
+      </li>
+    </ul>
+    <picture>
+      <source srcset="images/webp/construction-img.webp">
+      <img loading="lazy" class="construction-info__img" src="./images/construction-img.png" width="1170" height="520"
+        alt="Фото станка">
+    </picture>
+    <div class="construction-info__label">
+      <button type="button" class="construction-info__btn button">
+        Перейти в каталог домов
+      </button>
+      <a class="construction-info__link link-decoration" href="#">
+        <span class="link-decoration__circel">
+          <svg class="link-decoration__icon" width="5" height="10">
+            <use xlink:href="./images/sprite.svg#arrow-right"></use>
+          </svg>
+        </span>
+        Каталог бань
+      </a>
+    </div>
+  </div>
+</section>
+        <section class="about-company section">
+  <div class="container">
+    <h2 class="about-company__title title">
+      О компании TokarMebel
+    </h2>
+    <div class="about-company__photo">
+      <a class="about-company__quote-link fancybox" href="https://www.youtube.com/watch?v=axEYii0yjgg" data-fancybox>
+        <span class="about-company__link-play">
+          <svg class="about-company__link-icon" width="24" height="15">
+            <use xlink:href="images/sprite.svg#icon-play"></use>
+          </svg>
+        </span>
+        <span class="about-company__link-text">
+          Посмотреть короткое видео о компании (2:42 мин)
+        </span>
+      </a>
+      <blockquote class="about-company__quote">
+        <h3 class="about-company__name-owner">
+          Точилов Александр Николаевич
+        </h3>
+        <p class="about-company__quote-text">
+          Цитата о компании, пару слов от самого лица компании. Цитата о компании, пару слов от самого лица компании.
+        </p>
+      </blockquote>
+    </div>
+    <ul class="about-company__list">
+      <li class="about-company__item">
+        <span class="about-company__top-card">
+          <span class="about-company__card-number">21 </span> год
+        </span>
+        <p class="about-company__text-card">
+          Работаем на рынке Украины с 1998 года
+        </p>
+      </li>
+      <li class="about-company__item">
+        <span class="about-company__top-card">
+          <span class="about-company__card-number">300+</span>
+        </span>
+        <p class="about-company__text-card">
+          Позиций различных строений
+        </p>
+      </li>
+      <li class="about-company__item">
+        <span class="about-company__top-card">
+          до <span class="about-company__card-number">7%</span>
+        </span>
+        <p class="about-company__text-card">
+          Влажность просушенного дерева, что соответствует нормативам ГОСТ
+        </p>
+      </li>
+      <li class="about-company__item">
+        <span class="about-company__top-card">
+          в <span class="about-company__card-number">1,5</span> раза
+        </span>
+        <p class="about-company__text-card">
+          Стоимость доставки ниже рыночной
+        </p>
+      </li>
+    </ul>
+    <div class="about-company__label">
+      <a class="about-company__link button" href="#">
+        Подробнее о компании
+      </a>
+    </div>
+  </div>
+</section>
+        <section class="types-build section">
+  <div class="container">
+    <h2 class="types-build__title title">
+      Мы разделяем 3 вида строений
+    </h2>
+    <ul class="types-build__list">
+      <li class="types-build__item">
+        <article class="card-types-build">
+          <picture>
+            <source srcset="images/webp/card-types-build-1.webp">
+            <img loading="lazy" class="card-types-build__img" width="360" height="280"
+              src="./images/card-types-build-1.png" alt="Фотография дома из профилированого бруса">
+          </picture>
+          <div class="card-types-build__body">
+            <h3 class="card-types-build__title">
+              Жилые строения
+            </h3>
+            <ul class="card-types-build__list">
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Дома из профилированого бруса</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Дома из оцилиндрованого бруса</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Каркасные дома</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Дома из блока</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+      <li class="types-build__item">
+        <article class="card-types-build">
+          <picture>
+            <source srcset="images/webp/card-types-build-2.webp">
+            <img loading="lazy" class="card-types-build__img" width="360" height="280"
+              src="./images/card-types-build-2.png" alt="Фотография коммерческово здания">
+          </picture>
+          <div class="card-types-build__body">
+            <h3 class="card-types-build__title">
+              Коммерческие
+            </h3>
+            <ul class="card-types-build__list">
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Базы отдыха</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Гостинницы</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Рестораны</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Кафе</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Магазины</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+      <li class="types-build__item">
+        <article class="card-types-build">
+          <picture>
+            <source srcset="images/webp/card-types-build-3.webp">
+            <img loading="lazy" class="card-types-build__img" width="360" height="280"
+              src="./images/card-types-build-3.png" alt="Фотография деревяной бани">
+          </picture>
+          <div class="card-types-build__body">
+            <h3 class="card-types-build__title">
+              Садовые и хоз
+            </h3>
+            <ul class="card-types-build__list">
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Деревянные бани</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Беседки</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Альтанки</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Детские игровые площадки</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Гаражи</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Деревянные детские домики</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Мангальные зоны и барбекю</a>
+              </li>
+              <li class="card-types-build__item">
+                <a class="card-types-build__link" href="#">Кухни</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+        <section class="new section">
+  <div class="container">
+    <div class="new__label">
+      <h2 class="new__title title">
+        Последние статьи
+      </h2>
+      <div class="new__navigation new__navigation-hide">
+        <button class="new__slider-arrow new__slider-arrow--prevv ">
+          <svg class="new__arrow-icon" width="17" height="10">
+            <use xlink:href="images/sprite.svg#icon-swiperArrow"></use>
+          </svg>
+        </button>
+        <div class="slider-fraction new__navigation-top"></div>
+        <button class="new__slider-arrow new__slider-arrow--nextt">
+          <svg class="new__arrow-icon new__arrow-icon--next" width="17" height="10">
+            <use xlink:href="images/sprite.svg#icon-swiperArrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="new__container swiper">
+
+      <div class="new__wrapper swiper-wrapper">
+
+        <div class="new__slide swiper-slide">
+          <article class="new-card">
+            <span class="new-card__badges">Архитектура</span>
+            <a class="new-card__link" href="#">
+              <picture>
+                <source srcset="images/webp/new-img-1.webp">
+                <img loading="lazy" class="new-card__img" src="images/new-img-1.png" width="370" height="260"
+                  alt="Фото готовый загородный дом">
+              </picture>
+            </a>
+            <h3 class="new-card__title">
+              <a class="new-card__title-link" href="#">
+                Готовый загородный дом или самостоятельное строительство?
+              </a>
+            </h3>
+            <p class="new-card__text">
+              Купить или построить дом с нуля – неизбежный вопрос, когда возникает желание приобрести частную
+              недвижимость за городом.
+            </p>
+          </article>
+        </div>
+
+        <div class="new__slide swiper-slide">
+          <article class="new-card">
+            <span class="new-card__badges">Архитектура</span>
+            <a class="new-card__link" href="#">
+              <picture>
+                <source srcset="images/webp/new-img-2.webp">
+                <img loading="lazy" class="new-card__img" src="images/new-img-2.png" width="370" height="260"
+                  alt="Фото готовый загородный дом">
+              </picture>
+            </a>
+            <h3 class="new-card__title">
+              <a class="new-card__title-link" href="#">
+                Авторские проекты домов – почему эксклюзив выгоднее
+              </a>
+            </h3>
+            <p class="new-card__text">
+              Владельцу предстоит решить вопрос: купить готовый типовой вариант или заказать индивидуальный.
+            </p>
+          </article>
+        </div>
+
+        <div class="new__slide swiper-slide">
+          <article class="new-card">
+            <span class="new-card__badges">Архитектура</span>
+            <a class="new-card__link" href="#">
+              <picture>
+                <source srcset="images/webp/new-img-3.webp">
+                <img loading="lazy" class="new-card__img" src="images/new-img-3.png" width="370" height="260"
+                  alt="Фото готовый загородный дом">
+              </picture>
+            </a>
+            <h3 class="new-card__title">
+              <a class="new-card__title-link" href="#">
+                Красивые дома: 100+ фото лучших проектов
+              </a>
+            </h3>
+            <p class="new-card__text">
+              Современная малоэтажная застройка в России представлена как типовыми архитектурными решениями,
+              популярными.
+            </p>
+          </article>
+        </div>
+
+        <div class="new__slide swiper-slide">
+          <article class="new-card">
+            <span class="new-card__badges">Архитектура</span>
+            <a class="new-card__link" href="#">
+              <picture>
+                <source srcset="images/webp/new-img-1.webp">
+                <img loading="lazy" class="new-card__img" src="images/new-img-1.png" width="370" height="260"
+                  alt="Фото готовый загородный дом">
+              </picture>
+            </a>
+            <h3 class="new-card__title">
+              <a class="new-card__title-link" href="#">
+                Готовый загородный дом или самостоятельное строительство?
+              </a>
+            </h3>
+            <p class="new-card__text">
+              Купить или построить дом с нуля – неизбежный вопрос, когда возникает желание приобрести частную
+              недвижимость за городом.
+            </p>
+          </article>
+        </div>
+
+        <div class="new__slide swiper-slide">
+          <article class="new-card">
+            <span class="new-card__badges">Архитектура</span>
+            <a class="new-card__link" href="#">
+              <picture>
+                <source srcset="images/webp/new-img-3.webp">
+                <img loading="lazy" class="new-card__img" src="images/new-img-3.png" width="370" height="260"
+                  alt="Фото готовый загородный дом">
+              </picture>
+            </a>
+            <h3 class="new-card__title">
+              <a class="new-card__title-link" href="#">
+                Красивые дома: 100+ фото лучших проектов
+              </a>
+            </h3>
+            <p class="new-card__text">
+              Современная малоэтажная застройка в России представлена как типовыми архитектурными решениями,
+              популярными.
+            </p>
+          </article>
+        </div>
+
+      </div>
+
+      <div class="new__navigation-show">
+        <div class="new__navigation">
+          <button class="new__slider-arrow new__slider-arrow--prev ">
+            <svg class="new__arrow-icon" width="17" height="10">
+              <use xlink:href="images/sprite.svg#icon-swiperArrow"></use>
+            </svg>
+          </button>
+          <div class="slider-fraction new__navigation-bottom"></div>
+          <button class="new__slider-arrow new__slider-arrow--next">
+            <svg class="new__arrow-icon new__arrow-icon--next" width="17" height="10">
+              <use xlink:href="images/sprite.svg#icon-swiperArrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+        <section class="ceo-info section">
+  <div class="container">
+    <div class="ceo-info__inner">
+      <div class="ceo-info__content">
+        <h2 class="ceo-info__title title">
+          TokarCompany - Производственно-строительная компания
+        </h2>
+        <div class="ceo-info__text">
+          <p>
+            Производственно строительная компания TokarCompany – известный участник строительного рынка Украины, в нишах
+            загородной и коммерческой недвижимости. Специализация фирмы – строительство садовых конструкций, а также
+            объектов жилого и коммерческого назначения.
+          </p>
+          <p>
+            TokarCompany – производитель садовых строений
+            Производственно строительная компания ТокарКомпани основана братьями Виталием и Василием Токаром. Изначально
+            на фирме изготавливалась мебель – столы, стулья и многое другое. Ассортимент постепенно расширялся, и со
+            временем Компания Токар начала позиционировать себя как профессиональный производитель садовых строений.
+            Это, в первую очередь, беседки, садовые конструкции, малые архитектурные формы, а также модульные, дачные
+            домики, бани, сауны, коммерческие зоны барбекю и тому подобное.
+            Компания Tokar за десятки лет активной деятельности нарастила богатый производственный опыт и внушительную
+            базу клиентов. Территориально TokarCo находится в Закарпатской области, г. Тячев. Заказы выполняются по всей
+            Украине.
+          </p>
+          <p>
+            TokarCompany – производитель садовых строений
+            Производственно строительная компания ТокарКомпани основана братьями Виталием и Василием Токаром. Изначально
+            на фирме изготавливалась мебель – столы, стулья и многое другое. Ассортимент постепенно расширялся, и со
+            временем Компания Токар начала позиционировать себя как профессиональный производитель садовых строений.
+            Это, в первую очередь, беседки, садовые конструкции, малые архитектурные формы, а также модульные, дачные
+            домики, бани, сауны, коммерческие зоны барбекю и тому подобное.
+            Компания Tokar за десятки лет активной деятельности нарастила богатый производственный опыт и внушительную
+            базу клиентов. Территориально TokarCo находится в Закарпатской области, г. Тячев. Заказы выполняются по всей
+            Украине.
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source srcset="images/webp/ceo-img.webp">
+        <img loading="lazy" class="ceo-info__img" src="./images/ceo-img.jpg" width="570" height="470"
+          alt="Фотография дома из бруса">
+      </picture>
+    </div>
+  </div>
+</section>
+
     </main>
 
-    
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <nav class="footer__left">
+        <ul class="footer__menu-top menu">
+          <li class="footer__menu-top-item menu__item">
+            <a class="footer__menu-top-link menu__link" href="#">Жилое</a>
+          </li>
+          <li class="footer__menu-top-item menu__item">
+            <a class="footer__menu-top-link menu__link" href="#">Коммерческое</a>
+          </li>
+          <li class="footer__menu-top-item menu__item">
+            <a class="footer__menu-top-link menu__link" href="#">Садовое</a>
+          </li>
+        </ul>
+        <ul class="footer__menu-bottom">
+          <li class="footer__menu-bottom-item">
+            <button class="footer__menu-bottom-btn" type="button">Жилое</button>
+            <ul class="footer__tab-menu">
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Дома из профилированого бруса</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Дома из оцилиндрованого бруса</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Каркасные дома</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Дома из блока</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__menu-bottom-item">
+            <button class="footer__menu-bottom-btn" type="button">Коммерческое</button>
+            <ul class="footer__tab-menu">
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Базы отдыха</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Гостинницы</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Рестораны</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Кафе</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Магазины</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__menu-bottom-item">
+            <button class="footer__menu-bottom-btn" type="button">Садовое</button>
+            <ul class="footer__tab-menu">
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Деревянные бани</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Беседки</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Альтанки</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Детские игровые площадки</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Гаражи</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Деревянные детские домики</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Мангальные зоны и барбекю</a>
+              </li>
+              <li class="footer__tab-menu-item">
+                <a class="footer__tab-link" href="#">Кухни</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-    
+      <div class="footer__right">
+        <nav class="footer__right-nav">
+          <ul class="footer__right-menu">
+            <li class="footer__right-menu-item">
+              <a class="footer__right-menu-link" href="#">О компании</a>
+            </li>
+            <li class="footer__right-menu-item">
+              <a class="footer__right-menu-link" href="#">Наши работы</a>
+            </li>
+          </ul>
+          <button class="footer__right-btn button" type="button">Заказать звонок</button>
+        </nav>
+
+        <a class="footer__logo logo" href="#">
+          <img class="footer__logo-img logo__img" src="./images/icons/icon-logo.svg" width="238" height="32"  alt="">
+          <span class="logo__text">
+            TokarCompany - производственно -строительная компания
+          </span>
+        </a>
+
+        <div class="footer__contacts contacts">
+          <div class="footer__messenger contacts__messenger">
+            <p class="footer__messenger-text contacts__messenger-text">
+              Связаться напрямую:
+            </p>
+            <a class="contacts__messenger-item contacts__messenger-item--telegram"
+            style="background-image: url('images/icons/icon-telegram.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--whatsapp"
+            style="background-image: url('images/icons/icon-whatsapp.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--viber"
+            style="background-image: url('images/icons/icon-viber.svg');" href="#"></a>
+          </div>
+
+          <div class="footer__contacts-info contacts__info">
+            <a class="contacts__info-link" href="tel:+380671755630">
+              +3 80 (67) 175 56 30
+            </a>
+            <p class="contacts__info-text">
+              с
+              <time class="contacts__info-time">09:00</time>
+              до
+              <time class="contacts__info-time">18:00</time>
+              (пн-вс)
+            </p>
+          </div>
+          <div class="footer__call contacts__call">
+            <button class=" button" type="button">Заказать звонок</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="footer__copy">
+    © 2020. Все права защищены. TokarCompany - Производственно-строительная компания. Информация, представленная на
+    сайте, не является публичной офертой.
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 
 </html>

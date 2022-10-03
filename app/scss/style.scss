@@ -1,12 +1,19 @@
 @import 'reset';
 @import 'fonts';
+@import 'libs';
 @import 'vars';
 @import 'global';
 
 
 @import 'components/header';
 @import 'components/hero';
+@import 'components/benefits';
 @import 'components/catalog-project';
+@import 'components/construction-info';
+@import 'components/about-company';
+@import 'components/types-build';
+@import 'components/new';
+@import 'components/ceo-info';
 
 
 @import 'components/footer';

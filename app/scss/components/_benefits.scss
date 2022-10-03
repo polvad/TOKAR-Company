@@ -3,6 +3,7 @@
   box-shadow: 0 0 30px rgba(43, 42, 40, 0.08);
   border-radius: 8px;
   padding: 56px 30px 50px 60px;
+  margin-bottom: -196px;
 
   &__title {
     line-height: 1.6;
@@ -15,7 +16,6 @@
   }
 
   &__item {
-    
     max-width: 260px;
     font-size: 15px;
     line-height: 2;
@@ -31,5 +31,43 @@
 
   &__text {
     font-weight: 300;
+  }
+}
+
+@media(max-width: 1200px) {
+  .benefits {
+    &__list {
+      flex-wrap: wrap;
+      row-gap: 40px;
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      text-align: center;
+      background-position: top center;
+
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits {
+    padding: 33px 0 46px;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 13px;
+    }
+
+    &__list {
+      row-gap: 26px;
+    }
+
+    &__item {
+      max-width: 223px;
+      background-size: 50px 50px;
+      padding-top: 60px;
+      line-height: 1.6;
+    }
   }
 }

@@ -1,45 +1,45 @@
 <header class="header">
   <div class="container">
     <div class="header__top">
+      <button class="burger" type="button">
+        <span class="burger__line"></span>
+      </button>
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/icons/icon-logo.svg" alt="">
-        <span class="logo__text">
+        <img class="logo__img" src="./images/icons/icon-logo.svg" width="251" height="33" alt="Логотип TokarCompany">
+        <span class="logo__text logo__text--hidden">
           TokarCompany - производственно -строительная компания
         </span>
       </a>
-      <div class="contacts">
-        <div class="contacts__messenger">
+      <div class="header__contacts contacts">
+
+        <div class="header__messenger contacts__messenger">
           <p class="contacts__messenger-text">
             Связаться напрямую:
           </p>
-          <a class="contacts__messenger-item contacts__messenger-item--telegram" href="#">
-            <img class="contacts__messenger-icon" src="./images/icons/icon-telegram.svg" width="12" height="12"
-              alt="Іконка Telegram">
-          </a>
-          <a class="contacts__messenger-item contacts__messenger-item--whatsapp" href="#">
-            <img class="contacts__messenger-icon" src="images/icons/icon-whatsapp.svg" width="12" height="12"
-              alt="Іконка Whatsapp">
-          </a>
-          <a class="contacts__messenger-item contacts__messenger-item--viber" href="#">
-            <img class="contacts__messenger-icon" src="images/icons/icon-viber.svg" width="12" height="12"
-              alt="Іконка Viber">
-          </a>
+          <a class="contacts__messenger-item contacts__messenger-item--telegram"
+            style="background-image: url('images/icons/icon-telegram.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--whatsapp"
+            style="background-image: url('images/icons/icon-whatsapp.svg');" href="#"></a>
+          <a class="contacts__messenger-item contacts__messenger-item--viber"
+            style="background-image: url('images/icons/icon-viber.svg');" href="#"></a>
         </div>
 
-        <div class="contacts__info">
+        <div class="header__contacts-info contacts__info">
           <a class="contacts__info-link" href="tel:+380671755630">
             +3 80 (67) 175 56 30
           </a>
           <p class="contacts__info-text">
-            с
-            <time class="contacts__info-time">09:00</time>
-            до
-            <time class="contacts__info-time">18:00</time>
-            (пн-вс)
+            с 09:00 до 18:00 (пн-вс) 
           </p>
         </div>
-        <div class="contacts__call">
-          <button class="contacts__call-btn button" type="button">Заказать звонок</button>
+
+        <div class="header__contacts-call contacts__call">
+          <button class="contacts__call-btn button" type="button">
+            <span>Заказать звонок</span>
+            <svg class="contacts__btn-icon" width="22" height="22">
+              <use xlink:href="images/sprite.svg#icon-call"></use>
+            </svg>
+          </button>
           <p class="contacts__call-text">Бесплатно по Украине</p>
         </div>
       </div>
@@ -48,15 +48,15 @@
       </div>
     </div>
     <nav class="header__bottom">
-      <ul class="header__list">
-        <li class="header__item">
-          <a class="header__link" href="#">Жилое</a>
+      <ul class="header__list menu">
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Жилое</a>
         </li>
-        <li class="header__item">
-          <a class="header__link" href="#">Коммерческое</a>
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Коммерческое</a>
         </li>
-        <li class="header__item">
-          <a class="header__link" href="#">Садовое</a>
+        <li class="header__item menu__item">
+          <a class="header__link menu__link" href="#">Садовое</a>
         </li>
       </ul>
       <ul class="header__menu">
